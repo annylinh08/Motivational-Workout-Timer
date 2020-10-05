@@ -4,8 +4,9 @@ Motivational Workout Timer – is a countdown timer app which allows user to ent
 ## Purpose
 This app helps user be more focus on workout. Users do not need to workout and mind about the timer at the same time, as the app will ring when time is up or when users should start the workout. It will also calculate the cycle and repeat the timer has been set for the cycle at the beginning. During the working out session, the app will pop up some random motivate messages to make user smile and encourage them to keep up.
 
-## Programming Language
+## Programming Language/Technology
 This app is built with Kotlin
+Database: Google Firebase
 
 ## Status
 It is in progress
