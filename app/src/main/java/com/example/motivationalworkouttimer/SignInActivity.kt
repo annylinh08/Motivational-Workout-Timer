@@ -44,6 +44,7 @@ class SignInActivity : AppCompatActivity() {
             mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener{ task ->
                     if(task.isSuccessful){
+                        Toast.makeText(this, "Successfully signed in", Toast.LENGTH_LONG).show()
                         val intent = Intent(applicationContext, ExercisesListActivity::class.java)
                         startActivity(intent)
                         finish()

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Add Exercise"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/exerciseName"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="320sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/my_border"
+        android:hint=" Exercise Name"
+        />
+
+    <EditText
+        android:id="@+id/numOfCycles"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="320sp"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@drawable/my_border"
+        android:hint=" How many cycles?"
+        />
+
+    <EditText
+        android:id="@+id/prepareTime"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="320sp"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@drawable/my_border"
+        android:hint=" Prepare Time"
+        />
+
+    <EditText
+        android:id="@+id/workoutTime"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="320sp"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@drawable/my_border"
+        android:hint=" Workout Time"
+        />
+
+    <EditText
+        android:id="@+id/restTime"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="320sp"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@drawable/my_border"
+        android:hint=" Rest time"
+        />
+
+    <LinearLayout
+        android:id="@+id/btnLL"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:radius="6dp"
+            android:text="Save"
+            android:textColor="#F8F4F4" />
+
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/my_border"
+            android:text="Start Now"
+            android:textAlignment="center"
+            android:textColor="#0B0B0B" />
+    </LinearLayout>
+
+</LinearLayout>
