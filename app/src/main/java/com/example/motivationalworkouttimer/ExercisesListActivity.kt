@@ -36,7 +36,6 @@ class ExercisesListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercises_list)
 
-        //db = FirestoreDatabase.getInstance()
         excerciseRecyclerView.layoutManager = LinearLayoutManager(this)
 
         val query = db.collection("exercises").orderBy("title", Query.Direction.ASCENDING)
@@ -72,9 +71,9 @@ class ExercisesListActivity : AppCompatActivity() {
                 .setView(addExerciseDialog)
             val addExeciseAlert = mBuilder.show()
             addExerciseDialog.saveBtn.setOnClickListener{
-                if ((!TextUtils.isEmpty(exerciseName.text)) && (!TextUtils.isEmpty(numOfCycles.text)) && (!TextUtils.isEmpty(prepareTime.text)) && (!TextUtils.isEmpty(workoutTime.text)) && (!TextUtils.isEmpty(restTime.text))  ) {
+                if ((!TextUtils.isEmpty(exerciseName.text.toString())) && (!TextUtils.isEmpty(numOfCycles.text.toString())) && (!TextUtils.isEmpty(prepareTime.text.toString())) && (!TextUtils.isEmpty(workoutTime.text.toString())) && (!TextUtils.isEmpty(restTime.text.toString()))  ) {
                     val exercise = Exercise()
-                    exercise.title = exerciseName.text.toString()
+                    exercise.title = exerciseName.text.toString().trim()
                     exercise.cycle = numOfCycles.text.toString().toInt()
                     exercise.prepTime = prepareTime.text.toString().toInt()
                     exercise.workTime = workoutTime.text.toString().toInt()
