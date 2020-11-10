@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "482876665570",
+    "firebase_url": "https://motivational-workout-timer.firebaseio.com",
+    "project_id": "motivational-workout-timer",
+    "storage_bucket": "motivational-workout-timer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482876665570:android:268117db7bec9468a0b8bb",
+        "android_client_info": {
+          "package_name": "com.example.motivationalworkouttimer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482876665570-jiviru1eaqvmsgas3uqcla1rne9dsui5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSKa5jUe_4AqPdbF6QJ4Xn32dJgSYf3ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482876665570-jiviru1eaqvmsgas3uqcla1rne9dsui5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
