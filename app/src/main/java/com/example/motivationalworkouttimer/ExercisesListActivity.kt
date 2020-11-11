@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.google.firebase.ktx.Firebase
+import com.wajahatkarim3.easyvalidation.core.view_ktx.nonEmpty
 import kotlinx.android.synthetic.main.activity_exercises_list.*
 import kotlinx.android.synthetic.main.add_exercise.*
 import kotlinx.android.synthetic.main.add_exercise.view.*
@@ -71,13 +72,13 @@ class ExercisesListActivity : AppCompatActivity() {
                 .setView(addExerciseDialog)
             val addExeciseAlert = mBuilder.show()
             addExerciseDialog.saveBtn.setOnClickListener{
-                if ((!TextUtils.isEmpty(exerciseName.text.toString())) && (!TextUtils.isEmpty(numOfCycles.text.toString())) && (!TextUtils.isEmpty(prepareTime.text.toString())) && (!TextUtils.isEmpty(workoutTime.text.toString())) && (!TextUtils.isEmpty(restTime.text.toString()))  ) {
+                if ((addExerciseDialog.exerciseName.text.toString().nonEmpty()) && (addExerciseDialog.numOfCycles.text.toString().nonEmpty()) && (addExerciseDialog.prepareTime.text.toString().nonEmpty()) && (addExerciseDialog.workoutTime.text.toString().nonEmpty()) && (addExerciseDialog.restTime.text.toString().nonEmpty())  ) {
                     val exercise = Exercise()
-                    exercise.title = exerciseName.text.toString().trim()
-                    exercise.cycle = numOfCycles.text.toString().toInt()
-                    exercise.prepTime = prepareTime.text.toString().toInt()
-                    exercise.workTime = workoutTime.text.toString().toInt()
-                    exercise.restTime = restTime.text.toString().toInt()
+                    exercise.title = addExerciseDialog.exerciseName.text.toString()
+                    exercise.cycle = addExerciseDialog.numOfCycles.text.toString().toInt()
+                    exercise.prepTime = addExerciseDialog.prepareTime.text.toString().toInt()
+                    exercise.workTime = addExerciseDialog.workoutTime.text.toString().toInt()
+                    exercise.restTime = addExerciseDialog.restTime.text.toString().toInt()
 
                     val db = FirebaseFirestore.getInstance().collection("exercises")
                     exercise.id = db.document().id
@@ -93,6 +94,8 @@ class ExercisesListActivity : AppCompatActivity() {
         }
 
     }
+
+
 
     override fun onStart() {
         super.onStart()

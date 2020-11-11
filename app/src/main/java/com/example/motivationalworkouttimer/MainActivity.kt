@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(){
         }
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("YOUR_WEB_APPLICATION_CLIENT_ID")
+            .requestIdToken("482876665570-jiviru1eaqvmsgas3uqcla1rne9dsui5.apps.googleusercontent.com")
             .requestEmail()
             .build()
 
@@ -56,13 +56,6 @@ class MainActivity : AppCompatActivity(){
         startActivityForResult(
             signInIntent, RC_SIGN_IN
         )
-    }
-
-    private fun signOut() {
-        mGoogleSignInClient.signOut()
-            .addOnCompleteListener(this) {
-                // Update your UI here
-            }
     }
 
     private fun revokeAccess() {
@@ -82,28 +75,7 @@ class MainActivity : AppCompatActivity(){
     }
 
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
-        try {
-            val account = completedTask.getResult(
-                ApiException::class.java
-            )
-            // Signed in successfully
-            val googleId = account?.id ?: ""
-            Log.i("Google ID",googleId)
-
-            val googleFirstName = account?.givenName ?: ""
-            Log.i("Google First Name", googleFirstName)
-
-            val googleLastName = account?.familyName ?: ""
-            Log.i("Google Last Name", googleLastName)
-
-            val googleEmail = account?.email ?: ""
-            Log.i("Google Email", googleEmail)
-
-            val googleProfilePicURL = account?.photoUrl.toString()
-            Log.i("Google Profile Pic URL", googleProfilePicURL)
-
-            val googleIdToken = account?.idToken ?: ""
-            Log.i("Google ID Token", googleIdToken)
+        try{
             val intent = Intent(applicationContext, ExercisesListActivity::class.java)
             startActivity(intent)
 

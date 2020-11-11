@@ -3,9 +3,15 @@ package com.example.motivationalworkouttimer
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -15,6 +21,9 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 
 
 class SignUpActivity : AppCompatActivity() {
+
+    lateinit var mGoogleSignInClient: GoogleSignInClient
+    private val RC_SIGN_IN = 9001
     private lateinit var mAuth: FirebaseAuth
     private lateinit var refUsers: DatabaseReference
     private var firebaseUserID: String = ""
@@ -25,6 +34,45 @@ class SignUpActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         buttonSignup1.setOnClickListener {
             startSignUp()
+        }
+        googleSignin1.setOnClickListener {
+            signIn()
+        }
+    }
+
+    private fun signIn() {
+        val signInIntent = mGoogleSignInClient.signInIntent
+        startActivityForResult(
+            signInIntent, RC_SIGN_IN
+        )
+    }
+
+    private fun revokeAccess() {
+        mGoogleSignInClient.revokeAccess()
+            .addOnCompleteListener(this) {
+                // Update your UI here
+            }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RC_SIGN_IN) {
+            val task =
+                GoogleSignIn.getSignedInAccountFromIntent(data)
+            handleSignInResult(task)
+        }
+    }
+
+    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
+        try{
+            val intent = Intent(applicationContext, ExercisesListActivity::class.java)
+            startActivity(intent)
+
+        } catch (e: ApiException) {
+            // Sign in was unsuccessful
+            Log.e(
+                "failed code=", e.statusCode.toString()
+            )
         }
     }
 
@@ -44,9 +92,6 @@ class SignUpActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         firebaseUserID = mAuth.currentUser!!.uid
                         refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserID)
-//                        val userHashMap = HashMap<String, Any>()
-//                        userHashMap["uid"] = firebaseUserID
-//                        userHashMap["username"]
                         val intent = Intent(applicationContext, ExercisesListActivity::class.java)
                         startActivity(intent)
                         finish()
