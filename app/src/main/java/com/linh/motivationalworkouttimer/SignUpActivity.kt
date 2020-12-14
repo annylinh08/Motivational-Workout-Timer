@@ -20,6 +20,8 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
 
+    //code reference: https://firebase.google.com/docs/auth/android/google-signin
+
     lateinit var mGoogleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 9001
     private lateinit var mAuth: FirebaseAuth
