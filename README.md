@@ -11,6 +11,13 @@ Database: Google Firebase
 ## Status
 Finished
 
+## Update Sign Assignment 2
+Add Timer Acitivity  <br/>
+Add sound in the timer activity <br/>
+Update UI for List Exercise Item <br/>
+Add Swipe to Delete Function <br/>
+Fix Google Sign In
+
 ## App Mockup
 ![Alt text](https://i.imgur.com/wmXvx2t.png "Optional title")
 
