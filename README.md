@@ -9,7 +9,7 @@ This app is built with Kotlin <br/>
 Database: Google Firebase
 
 ## Status
-Finish
+Finished
 
 ## App Mockup
 ![Alt text](https://i.imgur.com/wmXvx2t.png "Optional title")
