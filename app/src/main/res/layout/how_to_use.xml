@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="166dp"
         android:layout_marginBottom="10dp"
-        android:text="This is a workout timer app.\n\nTo add new exercise, simply tap '+' at the top right.\n\nThen, enter the time for the exercise in seconds.\n\nClick 'Save' tp save it for next time workout or 'Start Now' to start without saving it " />
+        android:text="This is a workout timer app.\n\nTo add new exercise, simply tap '+' at the top right.\n\nThen, enter the time for the exercise in seconds.\n\nClick 'Save' to save it for next time workout or 'Start Now' to start without saving it. \n\nIn order to delete the exercise item, just swipe item to the left." />
 
     <Button
         android:id="@+id/okButton"
