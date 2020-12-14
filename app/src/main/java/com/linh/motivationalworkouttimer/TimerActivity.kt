@@ -13,7 +13,7 @@ import java.lang.Character.FORMAT
 
 class TimerActivity : AppCompatActivity() {
 
-
+    //code reference: https://github.com/AlexandreLadriere/Interval-Timer/blob/master/app/src/main/java/alexandre/ladriere/intervaltimer/TimerActivity.kt
     private var initCycle: Int = 0
     private var initPrep: Int = 0
     private var initWorkTime: Int = 0
