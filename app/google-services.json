@@ -15,6 +15,43 @@
       },
       "oauth_client": [
         {
+          "client_id": "482876665570-cnhdlc46u0q0mcourlkocpm3k5pc8gfd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.motivationalworkouttimer",
+            "certificate_hash": "433cd3c2601472eee79106472d530e8fc3d82c10"
+          }
+        },
+        {
+          "client_id": "482876665570-jiviru1eaqvmsgas3uqcla1rne9dsui5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSKa5jUe_4AqPdbF6QJ4Xn32dJgSYf3ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482876665570-jiviru1eaqvmsgas3uqcla1rne9dsui5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482876665570:android:4762772edf1a8390a0b8bb",
+        "android_client_info": {
+          "package_name": "com.linh.motivationalworkouttimer"
+        }
+      },
+      "oauth_client": [
+        {
           "client_id": "482876665570-jiviru1eaqvmsgas3uqcla1rne9dsui5.apps.googleusercontent.com",
           "client_type": 3
         }

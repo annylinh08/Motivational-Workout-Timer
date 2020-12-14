@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.motivationalworkouttimer"
+        applicationId "com.linh.motivationalworkouttimer"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-firestore:6.2.1'
     implementation 'com.google.firebase:firebase-database:19.5.1'
     implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.1"
+    implementation 'com.github.toanvc:floatingactionmenu:0.8.9'
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:26.0.0')
 
@@ -52,4 +53,6 @@ dependencies {
 
     // Also declare the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:18.1.0'
+
+
 }

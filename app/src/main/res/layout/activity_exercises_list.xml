@@ -14,7 +14,7 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001" />
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.979" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/exerTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exercises"
@@ -74,14 +74,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/excerciseRecyclerView"
-        android:layout_width="411dp"
-        android:layout_height="680dp"
+        android:layout_width="match_parent"
         android:scrollbars="vertical"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.0" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
