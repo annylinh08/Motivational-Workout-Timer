@@ -11,7 +11,7 @@ Database: Google Firebase
 ## Status
 Finished
 
-## Update Sign Assignment 2
+## Update
 Add Timer Acitivity  <br/>
 Add sound in the timer activity <br/>
 Update UI for List Exercise Item <br/>
