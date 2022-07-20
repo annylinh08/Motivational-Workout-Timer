@@ -9,7 +9,7 @@ This app is built with Kotlin <br/>
 Database: Google Firebase
 
 ## Status
-Finished
+Finished<br/>
 Google Play Link: https://play.google.com/store/apps/details?id=com.linh.motivationalworkouttimer
 
 ## Update
