@@ -10,6 +10,7 @@ Database: Google Firebase
 
 ## Status
 Finished
+Google Play Link: https://play.google.com/store/apps/details?id=com.linh.motivationalworkouttimer
 
 ## Update
 Add Timer Acitivity  <br/>
