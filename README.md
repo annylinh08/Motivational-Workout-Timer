@@ -8,8 +8,7 @@ This app helps user be more focus on workout. Users do not need to workout and m
 This app is built with Kotlin <br/>
 Database: Google Firebase
 
-## Status
-Finished<br/>
+## Link
 Google Play Link: https://play.google.com/store/apps/details?id=com.linh.motivationalworkouttimer
 
 ## Update
