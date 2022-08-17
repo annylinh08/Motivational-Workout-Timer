@@ -1,4 +1,4 @@
-# Motivational Workout Timer - Android App
+# Motivational Workout Timer [MOTIMER] - Android App
 Motivational Workout Timer – is a countdown timer app which allows user to enter the time for each exercise, break time between exercise/cycle, time to prepare and how many cycles for each exercise. It helps users calculate the time and remember that exercise for the next workout time.
 
 ## Purpose
